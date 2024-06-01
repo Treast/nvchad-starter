@@ -1,42 +1,53 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
   },
- {
- "neovim/nvim-lspconfig",
- config = function()
-     require("nvchad.configs.lspconfig").defaults()
-     require "configs.lspconfig"
-   end,
- },
- {
-  "williamboman/mason.nvim",
-  opts = {
-    ensure_installed = {
-      "lua-language-server", "stylua",
-      "html-lsp", "css-lsp" , "prettier", "php-cs-fixed",
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "stylua",
+        "html-lsp",
+        "css-lsp",
+        "prettier",
+        "php-cs-fixer",
+      },
     },
   },
- },
- {
-  "nvim-treesitter/nvim-treesitter",
-  opts = {
-    ensure_installed = {
-      "vim", "lua", "vimdoc",
-      "html", "css"
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "javascript",
+        "html",
+        "css",
+        "php",
+        "twig",
+        "typescript",
+      },
     },
   },
- },
   {
     "tpope/vim-fugitive",
     lazy = true,
     cmd = "Git",
   },
   {
-    "VonHeikemen/lsp-zero.nvim"
-  }
+    "VonHeikemen/lsp-zero.nvim",
+  },
 }
