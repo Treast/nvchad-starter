@@ -24,6 +24,7 @@ return {
         "prettier",
         "php-cs-fixer",
       },
+      automatic_installation = true,
     },
   },
   {
