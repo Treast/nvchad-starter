@@ -10,3 +10,6 @@ o.relativenumber = true
 o.number = true
 
 o.so = 9999
+o.tw = 0
+o.wrap = false
+o.formatoptions = "cqj"
